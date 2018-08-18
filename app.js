@@ -20,6 +20,7 @@ var index =require('./routes/index.js')
 app.set('view engine','ejs');
 //配置public目录为我们的静态资源目录
 app.use(express.static('public'));
+// upload 目录存放上传的图片
 app.use('/upload',express.static('upload'));
 app.use('/',index);
 app.use('/admin',admin);

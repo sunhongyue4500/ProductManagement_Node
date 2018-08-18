@@ -21,6 +21,7 @@ router.get('/add',function(req,res){
 router.post('/doAdd',function(req,res){
     //获取表单的数据 以及post过来的图片
     var form = new multiparty.Form();
+    // 只要指定了目录，就会在相应目录生成相应的文件
     form.uploadDir='upload'   //上传图片保存的地址     目录必须存在
     form.parse(req, function(err, fields, files) {
         //获取提交的数据以及图片上传成功返回的图片信息
